@@ -1,21 +1,20 @@
+import json, argparse, re
+from pprint import pprint
 from nltk.corpus import opinion_lexicon
 from nltk.stem import PorterStemmer
-import re, sys
+from collections import defaultdict
 
 
 #tokenise the feedback by removing stopwords, changing all to lowercase and stemming
 #returns a list of words
-def tokenise_file(file):
-
-    with open(file, 'r') as f:
-        data = f.read()
+def tokenise(feedback):
 
     stopwords_file = open('stopwords.txt', 'r').readlines()
     stopwords = [x.strip() for x in stopwords_file]
 
     ps = PorterStemmer()
 
-    tokens = re.split('[^a-zA-Z0-9]', data)
+    tokens = re.split('[^a-zA-Z0-9]', feedback)
     lowercase = [word.lower() for word in tokens if word.isalnum()]
     engstop = set(stopwords)
     filter_stopword = [word for word in lowercase if word not in engstop]
@@ -37,10 +36,8 @@ def compare_positive(review):
             if word == w:
                 list_pos.append(word)
                 count_pos += 1
-
-    print(list_pos)
+    # print(count_pos)
     return count_pos
-
 
 #Using nltk opinion lexicon, compare words in feedback to negative words and count occurence
 #returns total count of negative words found
@@ -54,28 +51,49 @@ def compare_negative(review):
             if word == w:
                 list_neg.append(word)
                 count_neg += 1
-
-    print(list_neg)
+    # print(list_neg)
     return count_neg
 
 
-#reads filename and comapares counts of positive and negative words. If equal, will be classified as neutral
-def main():
-    if len(sys.argv) < 2:
-        print("please enter filename")
-    else:
-        file_name = sys.argv[1]
-        review = tokenise_file(file_name)
-        pos = compare_positive(review)
-        neg = compare_negative(review)
+def semantic_analysis(data):
+    pos_dict = {}
+    neg_dict = {}
 
-        if pos > neg:
-            print("this review is positive")
-        elif neg > pos:
-            print("this review is negative")
+    for c in data['courses']:
+        pos = 0
+        neg = 0
+        print(c['courseName'])
+        for feedback in c['feedback']:
+            tokenised_comment = tokenise(feedback)
+            pos += compare_positive(tokenised_comment)
+            neg += compare_negative(tokenised_comment)
+        pos_dict[c['courseName']] = pos
+        neg_dict[c['courseName']] = neg
+
+    print(pos_dict)
+    print(neg_dict)
+
+    for cname in pos_dict:
+        total = float(pos_dict.get(cname) + neg_dict.get(cname))
+        if pos_dict.get(cname) > neg_dict.get(cname):
+            percentage = (pos_dict.get(cname) / total) * 100.00
+            print("{} : is positive by {:.2f} %".format(cname,percentage))
+        elif neg_dict.get(cname) > pos_dict.get(cname):
+            percentage = (neg_dict.get(cname) / total) * 100.00
+            print("{} : is negative by {:.2f} %".format(cname, percentage))
         else:
-            print("this review is neutral")
+            print("this is neutral")
+
+
+def main(filename):
+    with open(filename, 'r') as f:
+        data = json.load(f)
+
+    semantic_analysis(data)
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description='enter filename')
+    parser.add_argument('filename', type=str, help='json filename')
+    args = parser.parse_args()
+    main(args.filename)
