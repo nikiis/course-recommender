@@ -8,7 +8,7 @@
       "year": 4,
       "courseAverage": 78.86,
       "weightage": "70:30",
-      "area": "Databases",
+      "area": "Human Computer",
       "prerequisites": "None",
       "feedback": [
         "A very well-organised course for student who want to go into human-computer interaction or UX design.",
@@ -53,7 +53,8 @@
         "There doesn't seem to be a cohesive structure to the course, meaning that the topic of some lectures felt a bit random. There could have been more coverage on the analysis of data, specifically for the purposes of the coursework",
         "There was a great issue with the marking of the first assignment which stemmed of the markers not understanding the criteria correctly. More clear marking schemes (and/or coursework handouts) would be useful to avoid such future issues.",
         "This class was taught at a very basic level which, I feel, was not a level 11 standard. I would have liked to go into much greater depth on many of the topics covered and did not think that the amount of time spent on certain topics was useful, especially as it was information that many people would already know and have covered in earlier levels of education. "
-      ]
+      ],
+      "summary": "The design and implementation of efficient, effective and user friendly computer systems, including software objects and physical internet-enabled things, depends upon understanding both the technology and its users. Only then can designers be confident that these information appliances will be properly matched to the skills, knowledge and needs of their users. The study of Human-Computer Interaction (HCI) seeks to combine perspectives and methods of enquiry drawn from disciplines such as Interaction Design, Psychology and Sociology with the tools, techniques and technologies of Computer Science to create an approach to design which is both relevant and practical."
     },
     {
       "courseName": "Advanced Databases",
@@ -79,7 +80,8 @@
         "There was meant to be tutorials but the lecturer did not have rooms/times sorted to begin with and then they got cancelled due to the strikes so we only got 1 tutorial instead of 4 which is not good as I find tutorials to be very useful in preparing for the exam.The one tutorial we did have was very useful.",
         "There were supposed to be (only) 4 tutorials for the course. First one did not happen because of some organisation mistake made by ITO. Then, next two of them were cancelled due to the union strike and bad weather. Consequently, there was only one tutorial throughout the course. Unfortunately, I could not attend it but it was recorded."
       ],
-      "courseCredit": 10
+      "courseCredit": 10,
+      "summary": "This course aims at furthering database systems concepts through adding complexity and a more hands-on approach. In particular, we will focus on supporting multi-dimensional data in a DBMS, query optimisation, query evaluation, transaction processing and concurrency control in both a centralised and a distributed context. In terms of centralised databases, we shall start from single and multi-dimensional indexing methods, move on to join evaluation algorithms, and talk about query opimisation paradigms. We shall then focus on the issues of transaction processing, concurrency control and crash recovery. Finally, we shall revisit the previous issues in a distributed database environment."
     },
     {
       "courseName": "Operating Systems",
@@ -114,7 +116,53 @@
         "The code for the coursework is a bit of a mess in places. I would work on that a bit.",
         "The coursework was hard to get started on, as there was no help given regarding C++. Also, the lecturer speaks very fast."
       ],
-      "courseCredit": 20
+      "courseCredit": 20,
+      "summary": "This course provides an introduction to the design and implementation of general purpose multi-tasking operating systems. It concentrates on the kernel aspects of such systems with the emphasis being on concepts which lead to practical implementations. Throughout the course reference is made to a number of significant actual operating systems (Linux, Windows variants etc.) to illustrate real implementations.This 20 credit course replaces INFR09015 - Operating Systems (10 credits)."
+    },
+    {
+      "courseName": "Advanced Topics in Foundations of Databases",
+      "courseCode": "INFR11122",
+      "courseCredit": 20,
+      "level": 11,
+      "year": 5,
+      "courseAverage": 57.91,
+      "weightage": "0:100",
+      "area": "Databases",
+      "prerequisites": "None",
+      "feedback": [],
+      "summary": "The course focuses on three central aspects of big data: Volume, Variety and Veracity. It will cover tractability and parallel scalability of querying big data (volume), data models and data interoperability (variety), and foundations of data quality and uncertainty (veracity). It aims to expose students to current research and development in connection with big data theory, and prepare them for conducting research in this emerging area. The course content is dynamic and continuously updated to cover the state-of-the-art in big data theory."
+    },
+    {
+      "courseName": "Accelerated Natural Language Processing",
+      "courseCode": "INFR11125",
+      "courseCredit": 20,
+      "level": 11,
+      "year": 5,
+      "courseAverage": 64.96,
+      "weightage": "70:30",
+      "area": "NLP",
+      "prerequisites": "None",
+      "feedback": [
+        "Take this course and prepare to put lots of time in it, you will get the payback in terms of understanding more about natural language processing. The lecturer Sharon is very good.",
+        "Make sure you already know how to program. - The probability tutorial should be compulsory before starting the course to aid later lectures” , “Although the class might seem very difficult at first, if you put the effort in, it will get easier with time. Depending on your background, it might feel impossible for the first few weeks, but just keep with it!",
+        "Always keep updated.”, Make sure you deal with all the stuff required to cover. Don't lose confidence if you are also from linguistic background or other non-CS background.",
+        "Assignments are challenging. So start early!",
+        "Be prepare to study a lot and enjoy as you go.",
+        "Definitely read up on some of the core J&M chapters, such as N-grams, HMMs and some coding practice with Python!",
+        "I really enjoyed this course, I learned a lot. Although, I would highly recommend reading about linguistics before starting the course to make your life easier. It was very challenging, especially at the beginning.",
+        "I will speak as a student with a linguistics background. Study the material before the first lecture. Not the whole book necessarily. At least the first chapters to have a head start so that you will be able to be prepared before the lectures. Some chapters might take longer to understand so it's good that you have started the book early.",
+        "It's tough, but really rewarding and interesting.",
+        "Keep up with notes during the term, depending on your background it can be a pretty straightforward course but there is a large volume of material you will need to know for the exam! Sharon is an exceptional lecturer. She is really engaging and obviously very knowledgeable and can make even some of the very dry introductory stuff interesting. It is a good course to take if you are look for an overview / introduction to NLP.",
+        "Make a study group.",
+        "Only take this course if you like linguistics, _and_ if you are not afraid to use mathematical concepts together with linguistics concepts. Prepare for each lecture/lab/tutorial in advance. It's important to keep up with the rhythm",
+        "Review , Start early, try to keep up with the course content. You don't have to get deep understanding for each topic. Assignment 1 seems easy but people usually get less marks because of how they have written the reports.",
+        "Start with the reading early!” , ”Stay on top of the material at all cost - it's called accelerated for a reason.",
+        "Stay up to date with the lectures. If you miss one it's not the end of the world, but make sure to watch the recording.",
+        "Study study study! Attend lectures, and give yourself plenty of time to revise before the exam. There's A LOT of information that's covered in this course.",
+        "The one interested in natural language processing, and with basic programming skill.",
+        "This course will probably make you feel dumb sometimes. The concepts can be really complex, but if you actually complete the tutorial problem sets, you'll learn a lot. I would absolutely recommend forming a study group to solve tutorial questions before the session. Talking through the problems with peers is really helpful, even if you don't get all the answers. Take advantage of online resources like the Jurafsky Martin YouTube series. Re-watch lectures-- it's amazing what the pause button will do for your understanding."
+      ],
+      "summary": "The course will synthesize ideas from linguistics and computer science to provide students with a fast-paced introduction to the field of natural language processing. The course will cover the most widely-used theoretical and computational models of language, including both statistical and nonstatistical approaches. The course will familiarize students with a wide range of linguistic phenomena with the aim of appreciating the complexity, but also the systematic behaviour of natural languages like English, the pervasiveness of ambiguity, and how this presents challenges in natural language processing. In addition, the course introduce the most important algorithms and data structures that are commonly used to solve many NLP problems. The course will cover formal models for representing and analyzing the syntax and semantics of words, sentences, and discourse. Students will learn how to analyse sentences algorithmically, using hand-crafted and automatically induced treebank grammars, and how to build interpretable semantic representations. The course will also cover a number of standard models and algorithms that are used throughout language processing. Examples include n-gram and Hidden Markov Models, the EM algorithm, and dynamic programming algorithms such as chart parsing. **This course replaces INFR11059 Advanced Natural Language Processing**"
     }
   ]
 }
