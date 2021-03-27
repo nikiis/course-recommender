@@ -1,5 +1,5 @@
 # course-recommender
-TTDS group Project
+TTDS group Project: using semantic analysis to determine whether feedback on the informatics website is classified as "postivie" or "negative".
 
 On command line, write:
 python recommender.py courses.json
